@@ -1,7 +1,4 @@
-import Esercizio.Customer;
-import Esercizio.GestioneSteam;
-import Esercizio.Order;
-import Esercizio.Product;
+package Esercizio;
 
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -32,16 +29,16 @@ public class Main {
         //Test funzionamento
 
         System.out.println("Prodotti Books > 100: ");
-        GestioneSteam.getProductBook100(products).forEach(product-> System.out.println(product.getName()));
+        GestioneStream.getProductBook100(products).forEach(product-> System.out.println(product.getName()));
 
         System.out.println("Ordini con prodotti Baby:");
-        GestioneSteam.getOrderProductBaby(orders).forEach(order -> System.out.println(order.getId()));
+        GestioneStream.getOrderProductBaby(Order).forEach(order -> System.out.println(order.getId()));
 
         System.out.println("Prodotti Boys con sconto:");
-        GestioneSteam.getOrderProductBoys(products).forEach(product -> System.out.println(product.getName() + " - " + product.getPrice()));
+        GestioneStream.getOrderProductBoys(products).forEach(product -> System.out.println(product.getName() + " - " + product.getPrice()));
 
         System.out.println("Prodotti ordinati da clienti Tier 2 tra 01-Feb-2021 e 01-Apr-2021:");
-        GestioneSteam.getOrderCustomerTier(Order).forEach(product -> System.out.println(product.getName()));
+        GestioneStream.getOrderCustomerTier(Order).forEach(product -> System.out.println(product.getName()));
 
 
 
